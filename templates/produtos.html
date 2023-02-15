@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{%block title%} Produtos {%endblock%}
+{% block body %}
+<div class="divcentral">
+
+       <a href="{{url_for('index')}}">  <div class="divs">
+    <div class="seta"></div>
+    </div></a>
+    <h1 class="tituloft">Produtos</h1>
+
+                <h2 class="sn">Nome</h3>
+                <h2 class="sd">Preço</h3>
+               
+  
+             <div class="divlista1">
+            {% for produto in produtos %}
+           <h2 class="h22">{{ produto.nome }}</h2>
+            {% endfor %}
+  </div>
+             <div class="divlista2">
+            {% for produto in produtos %}
+                  <h2 class="h22">{{ produto.preço }}</h2>
+                {% endfor %}
+                </div>
+                
+                <div class="divlista3">
+            {% for produto in produtos %}
+                    <form action="/produtos" method="post">
+                  <input name="id" type="hidden" value="{{ produto.id }}">
+                    <input type="submit" value="Excluir" id="btne"> </form>
+                {% endfor %}
+               </div>
+                
+            
+       </div>
+
+
+{% endblock %}

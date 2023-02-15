@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{%block title%} Estoque {%endblock%}
+{% block body %}
+
+        <div class="divcentral">
+    <a href="{{url_for('index')}}">  <div class="divs">
+    <div class="seta"></div>
+    </div></a>
+   <h1 class="tituloft">Estoque</h1>
+
+                <h2 class="sne">Nome</h2>
+                <h2 class="sqe">Quantidade</h2>
+          <div id="divlista1e">
+           {% for key in dicionário %}
+            <h2 class="h22">{{key}}</h1>
+             {% endfor %}     </div>
+             
+          <div id="divlista2e">
+               {% for key in dicionário %}
+            <h2 class="h22">{{dicionário[key]}}</h1>
+             {% endfor %}     </div>
+              
+    
+                
+      
+            
+            
+       
+</div>
+        
+     
+   
+  
+        
+
+{% endblock %}

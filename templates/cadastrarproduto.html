@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{%block title%} Cadastro de Produtos {%endblock%}
+{% block body %}
+
+<div class="divcentral">
+
+<a href="{{url_for('index')}}">  <div class="divs">
+    <div class="seta"></div>
+    </div></a>
+ <h1 class='tituloft'>Cadastrar produto</h1>
+  <form action="/cadastrarproduto" method="post">
+      <input  autofocus name="nome" placeholder="Nome" type="text" class="in">
+      <input  autofocus  name="preço" placeholder="Preço" type="number" min="0.00" max="any" step=".01" class="ip">
+      <input type="submit" value="Enviar" class="btnp">
+
+   </form>
+ <h1 class="msg">{{ mensagem }}</h1>
+</div>
+
+
+
+{% endblock %}

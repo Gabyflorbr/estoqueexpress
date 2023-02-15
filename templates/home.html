@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{%block title%} Estoque Express{%endblock%}
+{% block body %}
+   <div class="divcentral">
+    <h1 class="título">Estoque Express</h1>
+    <div class="diva">
+        <a href="{{url_for('cadastrarproduto')}}"><input type="button" id="btn1" value="Cadastrar produto"></a>
+        <a href="{{url_for('produtos')}}"><input type="button" id="btn2" value="Produtos"></a>
+        <a href="{{url_for('entrada')}}"><input type="button" id="btn3" value="Cadastrar entrada"></a>
+    </div>
+    <div class="divb">
+    <a href="{{url_for('entradas')}}"><input type="button" id="btn4" value="Entradas"></a>
+    <a href="{{url_for('saida')}}"><input type="button" id="btn5" value="Cadastrar saída"></a>
+    <a href="{{url_for('saidas')}}"><input type="button" id="btn6" value="Saídas"></a>
+    </div>
+    <a href="{{url_for('estoque')}}"><input type="button" id="btn7" value="Estoque"></a>
+</div>
+{% endblock %}

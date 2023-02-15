@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{%block title%} Entradas {%endblock%}
+{% block body %}
+<div class="divcentral">
+    <a href="{{url_for('index')}}">  <div class="divs">
+    <div class="seta"></div>
+    </div></a>
+   <h1 class="tituloft">Entradas</h1>
+
+                <h2 class="sn">Nome</h2>
+                <h2 class="sd">Data</h2>
+                <h2 class="sq">Quantidade</h2>
+          <div class="divlista1">
+            {% for entrada in entradas %}
+                  <h2 class="h22">{{ entrada.nomedoproduto }}</h2>
+             {% endfor %}     </div>
+          <div class="divlista2">
+            {% for entrada in entradas %}
+                  <h2 class="h22">{{ entrada.data }}</h2>
+             {% endfor %}     </div>
+              <div class="divlista3">
+           {% for entrada in entradas %}
+                  <h2 class="h22">{{ entrada.quantidade }}</h2>
+             {% endfor %}   
+                 
+      
+            
+            
+       
+</div>
+
+{% endblock %}

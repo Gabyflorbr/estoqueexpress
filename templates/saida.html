@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{%block title%} Saída {%endblock%}
+{% block body %}
+    <div class="divcentral">
+
+<a href="{{url_for('index')}}">  <div class="divs">
+    <div class="seta"></div>
+    </div></a>
+ <h1 class='tituloft'>Cadastrar saída</h1>
+  <form action="/saida" method="post">
+      <select name="nome" class="in">
+          <option disabled selected value="">Nome</option>
+          {% for produto in produtos %}
+            <option value="{{ produto.nome }}" >{{ produto.nome }}</option>
+          {% endfor %}
+      </select>
+      <input  type=number autofocus name="quantidade" placeholder="Quantidade" value="0" class="ip">
+      <input type="submit" value="Enviar" class="btnse">
+
+   </form>
+ <h1 class="msg">{{ mensagem }}</h1>
+</div>
+      
+   
+
+
+
+{% endblock %}

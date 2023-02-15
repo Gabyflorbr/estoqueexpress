@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{%block title%} Entrada {%endblock%}
+{% block body %}
+ <div class="divcentral">
+
+<a href="{{url_for('index')}}">  <div class="divs">
+    <div class="seta"></div>
+    </div></a>
+ <h1 class='tituloft'>Cadastrar Entrada</h1>
+  <form action="/entrada" method="post">
+      <select name="nome" class="in">
+          <option disabled selected value="">Nome</option>
+          {% for produto in produtos %}
+            <option value="{{ produto.nome }}">{{ produto.nome }}</option>
+          {% endfor %}
+      </select>
+      <input type="number" name="quantidade" placeholder="Quantidade" value="0"  class="ip">
+      <input type="submit" value="Enviar" class="btnse">
+       
+   </form>
+<h3 class="msg">{{ mensagem }}</h3>
+
+
+
+{% endblock %}
